@@ -1,4 +1,12 @@
 <robot name="tiago">
+
+  <gripper name="gripper" clearance="0.05">
+    <position xyz="0 0 -0.12" rpy="1.5707963267948966 1.5707963267948966 0"/>
+    <link name="gripper_link" />
+    <joint name="gripper_left_finger_joint" />
+    <joint name="gripper_right_finger_joint" />
+  </gripper>
+
   <disable_collisions link1="torso_fixed_link" link2="arm_2_link" reason="User defined" />
   <disable_collisions link1="arm_tool_link" link2="wheel_left_link" reason="User defined" />
   <disable_collisions link1="base_antenna_right_link" link2="head_2_link" reason="User defined" />

@@ -17,13 +17,17 @@
     <xacro:arg name="has_thermal_camera" default="false"/>
     <xacro:arg name="multiple" default="false"/>
     <xacro:arg name="namespace" default=""/>
+    <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
+    <xacro:arg name="extrinsic_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
+
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
     <xacro:property name="laser_model" value="$(arg laser_model)" />
     <xacro:property name="camera_model" value="$(arg camera_model)" />
     <xacro:property name="is_multiple" value="$(arg multiple)" />
     <xacro:property name="nsp" value="$(arg namespace)" />
-
+ <xacro:property name="description_calibration_dir"       value="${arg description_calibration_dir}"/>
+  <xacro:property name="extrinsic_calibration_dir"       value="${arg extrinsic_calibration_dir}"/>
   <xacro:if value="${end_effector not in ['false', 'pal-gripper', 'pal-hey5', 'schunk-wsg']}">
     <xacro:wrong_end_effector/>
   </xacro:if>
