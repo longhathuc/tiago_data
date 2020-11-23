@@ -1784,7 +1784,7 @@
     <mimic joint="gripper_finger_joint" multiplier="1.0" offset="0.0"/>
   </joint>
   <!-- Grasping frame -->
-  <joint name="gripper_grasping_frame_joint" type="fixed">
+  <joint name="gripper__joint" type="fixed">
     <parent link="gripper_link"/>
     <child link="gripper_grasping_frame"/>
     <origin rpy="-1.5708 1.5708 0" xyz="0 0 -0.12"/>
